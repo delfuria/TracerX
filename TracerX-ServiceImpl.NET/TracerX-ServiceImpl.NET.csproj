@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>TracerX_ServiceImpl.NET</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TracerX-Common.NET\TracerX-Common.NET.csproj" />
+    <ProjectReference Include="..\TracerX-Logger.NET\TracerX-Logger.NET.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,35 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E301635B-84D6-4A08-9856-B7D5C0BCD918}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TracerX</RootNamespace>
-    <AssemblyName>TracerX-Viewer</AssemblyName>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject />
     <ApplicationIcon>Resources\scroll_view.ico</ApplicationIcon>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <TargetFramework>net461</TargetFramework>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -49,34 +28,23 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>false</BootstrapperEnabled>
+    <AssemblyTitle>TracerX-Viewer</AssemblyTitle>
+    <Product>TracerX</Product>
+    <Description>Diagnostic log viewer.</Description>
+    <Copyright>Copyright © Mark A. Lauritsen 2007-2018</Copyright>
+    <AssemblyVersion>7.1.*</AssemblyVersion>
+    <FileVersion>7.1.*</FileVersion>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile />
+    <PostBuildEvent />
+    <PostBuildEvent />
+    <PostBuildEvent />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <NoWarn>CS1591</NoWarn>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>
-    </DocumentationFile>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRules />
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>3570FEA91DD2FA03C7E7CCD91922583661A5954B</ManifestCertificateThumbprint>
@@ -96,302 +64,267 @@
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppArgs.cs" />
-    <Compile Include="ColoringRule.cs" />
-    <Compile Include="ColorPair.cs" />
-    <Compile Include="ColorUtil.cs" />
-    <Compile Include="DeploymentDescription.cs" />
-    <Compile Include="Controls\FlatButton.cs">
+    <Compile Update="Controls\FlatButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\CleanUpFilesDialog.cs">
+    <Compile Update="Forms\CleanUpFilesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CleanUpFilesDialog.Designer.cs">
+    <Compile Update="Forms\CleanUpFilesDialog.Designer.cs">
       <DependentUpon>CleanUpFilesDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormDataGridViewColumnSelector.cs">
+    <Compile Update="Forms\FormDataGridViewColumnSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormDataGridViewColumnSelector.designer.cs">
+    <Compile Update="Forms\FormDataGridViewColumnSelector.designer.cs">
       <DependentUpon>FormDataGridViewColumnSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RelatedForm.cs">
+    <Compile Update="Forms\RelatedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RelatedForm.Designer.cs">
+    <Compile Update="Forms\RelatedForm.Designer.cs">
       <DependentUpon>RelatedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ServerConnEditor.cs">
+    <Compile Update="Forms\ServerConnEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ServerConnEditor.Designer.cs">
+    <Compile Update="Forms\ServerConnEditor.Designer.cs">
       <DependentUpon>ServerConnEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\ListAndTreeOfFilterable.cs">
+    <Compile Update="Controls\ListAndTreeOfFilterable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ListAndTreeOfFilterable.Designer.cs">
+    <Compile Update="Controls\ListAndTreeOfFilterable.Designer.cs">
       <DependentUpon>ListAndTreeOfFilterable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\NewStartPage.cs">
+    <Compile Update="Controls\NewStartPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\NewStartPage.Designer.cs">
+    <Compile Update="Controls\NewStartPage.Designer.cs">
       <DependentUpon>NewStartPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\NoDblClickTreeView.cs">
+    <Compile Update="Controls\NoDblClickTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\PathControl.cs">
+    <Compile Update="Controls\PathControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\PathControl.Designer.cs">
+    <Compile Update="Controls\PathControl.Designer.cs">
       <DependentUpon>PathControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CategoryDialog.cs">
+    <Compile Update="Forms\CategoryDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CategoryDialog.Designer.cs">
+    <Compile Update="Forms\CategoryDialog.Designer.cs">
       <DependentUpon>CategoryDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CredentialsDialog.cs">
+    <Compile Update="Forms\CredentialsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CredentialsDialog.Designer.cs">
+    <Compile Update="Forms\CredentialsDialog.Designer.cs">
       <DependentUpon>CredentialsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PathSelector.cs">
+    <Compile Update="Forms\PathSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PathSelector.Designer.cs">
+    <Compile Update="Forms\PathSelector.Designer.cs">
       <DependentUpon>PathSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ServerListEditor.cs">
+    <Compile Update="Forms\ServerListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ServerListEditor.Designer.cs">
+    <Compile Update="Forms\ServerListEditor.Designer.cs">
       <DependentUpon>ServerListEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\GridPanel.cs">
+    <Compile Update="Controls\GridPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\StartServiceForm.cs">
+    <Compile Update="Forms\StartServiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StartServiceForm.Designer.cs">
+    <Compile Update="Forms\StartServiceForm.Designer.cs">
       <DependentUpon>StartServiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListViewSorter.cs" />
-    <Compile Include="Controls\CrumbBar.cs">
+    <Compile Update="Controls\CrumbBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CrumbBar.Designer.cs">
+    <Compile Update="Controls\CrumbBar.Designer.cs">
       <DependentUpon>CrumbBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ColorRulesDialog.cs">
+    <Compile Update="Forms\ColorRulesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ColorRulesDialog.Designer.cs">
+    <Compile Update="Forms\ColorRulesDialog.Designer.cs">
       <DependentUpon>ColorRulesDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ExportCSVForm.cs">
+    <Compile Update="Forms\ExportCSVForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ExportCSVForm.Designer.cs">
+    <Compile Update="Forms\ExportCSVForm.Designer.cs">
       <DependentUpon>ExportCSVForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PaletteViewer.cs">
+    <Compile Update="Forms\PaletteViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PaletteViewer.Designer.cs">
+    <Compile Update="Forms\PaletteViewer.Designer.cs">
       <DependentUpon>PaletteViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="IFilterable.cs" />
-    <Compile Include="Controls\ListViewTx.cs">
+    <Compile Update="Controls\ListViewTx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controls\ListViewTx.Designer.cs">
+    <Compile Update="Controls\ListViewTx.Designer.cs">
       <DependentUpon>ListViewTx.cs</DependentUpon>
     </Compile>
-    <Compile Include="MethodObject.cs" />
-    <Compile Include="PathGridRow.cs" />
-    <Compile Include="PathItem.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\About.cs">
+    <Compile Update="Forms\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\About.Designer.cs">
+    <Compile Update="Forms\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CallStack.cs">
+    <Compile Update="Forms\CallStack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CallStack.Designer.cs">
+    <Compile Update="Forms\CallStack.Designer.cs">
       <DependentUpon>CallStack.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ColumnsDlg.cs">
+    <Compile Update="Forms\ColumnsDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ColumnsDlg.Designer.cs">
+    <Compile Update="Forms\ColumnsDlg.Designer.cs">
       <DependentUpon>ColumnsDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FileProperties.cs">
+    <Compile Update="Forms\FileProperties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FileProperties.Designer.cs">
+    <Compile Update="Forms\FileProperties.Designer.cs">
       <DependentUpon>FileProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FilterDialog.cs">
+    <Compile Update="Forms\FilterDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FilterDialog.Designer.cs">
+    <Compile Update="Forms\FilterDialog.Designer.cs">
       <DependentUpon>FilterDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FindDialog.cs">
+    <Compile Update="Forms\FindDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FindDialog.Designer.cs">
+    <Compile Update="Forms\FindDialog.Designer.cs">
       <DependentUpon>FindDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FullText.cs">
+    <Compile Update="Forms\FullText.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FullText.Designer.cs">
+    <Compile Update="Forms\FullText.Designer.cs">
       <DependentUpon>FullText.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\License.cs">
+    <Compile Update="Forms\License.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\License.Designer.cs">
+    <Compile Update="Forms\License.Designer.cs">
       <DependentUpon>License.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoggerObject.cs" />
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="Forms\OptionsDialog.cs">
+    <Compile Update="Forms\OptionsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\OptionsDialog.Designer.cs">
+    <Compile Update="Forms\OptionsDialog.Designer.cs">
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PasswordDialog.cs">
+    <Compile Update="Forms\PasswordDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PasswordDialog.Designer.cs">
+    <Compile Update="Forms\PasswordDialog.Designer.cs">
       <DependentUpon>PasswordDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecentFilesAndFolders.cs" />
-    <Compile Include="Record.cs" />
-    <Compile Include="Forms\MainForm.cs">
+    <Compile Update="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainForm.Designer.cs">
+    <Compile Update="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reader.cs" />
-    <Compile Include="RemoteFileStream.cs" />
-    <Compile Include="RemoteFileWatcher.cs" />
-    <Compile Include="RemoteServer.cs" />
-    <Compile Include="Row.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SavedServer.cs" />
-    <Compile Include="Controls\ServerTree.cs">
+    <Compile Update="Controls\ServerTree.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Session.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="TestConnectionResult.cs" />
-    <Compile Include="ThreadName.cs" />
-    <Compile Include="ThreadObject.cs" />
-    <Compile Include="TraceLevelObject.cs" />
-    <Compile Include="Controls\TracerXViewerControl.cs">
+    <Compile Update="Controls\TracerXViewerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\TracerXViewerControl.Designer.cs">
+    <Compile Update="Controls\TracerXViewerControl.Designer.cs">
       <DependentUpon>TracerXViewerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UICommand.cs">
+    <Compile Update="UICommand.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UICommand.Designer.cs">
+    <Compile Update="UICommand.Designer.cs">
       <DependentUpon>UICommand.cs</DependentUpon>
     </Compile>
-    <Compile Include="UICommandProvider.cs">
+    <Compile Update="UICommandProvider.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UICommandProvider.designer.cs">
+    <Compile Update="UICommandProvider.designer.cs">
       <DependentUpon>UICommandProvider.cs</DependentUpon>
     </Compile>
-    <Compile Include="VersionChecker.cs" />
-    <Compile Include="ReaderThreadInfo.cs" />
-    <Compile Include="ViewItem.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\CleanUpFilesDialog.resx">
+    <EmbeddedResource Update="Forms\CleanUpFilesDialog.resx">
       <DependentUpon>CleanUpFilesDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormDataGridViewColumnSelector.resx">
+    <EmbeddedResource Update="Forms\FormDataGridViewColumnSelector.resx">
       <DependentUpon>FormDataGridViewColumnSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RelatedForm.resx">
+    <EmbeddedResource Update="Forms\RelatedForm.resx">
       <DependentUpon>RelatedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServerConnEditor.resx">
+    <EmbeddedResource Update="Forms\ServerConnEditor.resx">
       <DependentUpon>ServerConnEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ListAndTreeOfFilterable.resx">
+    <EmbeddedResource Update="Controls\ListAndTreeOfFilterable.resx">
       <DependentUpon>ListAndTreeOfFilterable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\NewStartPage.resx">
+    <EmbeddedResource Update="Controls\NewStartPage.resx">
       <DependentUpon>NewStartPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\PathControl.resx">
+    <EmbeddedResource Update="Controls\PathControl.resx">
       <DependentUpon>PathControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CategoryDialog.resx">
+    <EmbeddedResource Update="Forms\CategoryDialog.resx">
       <DependentUpon>CategoryDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CredentialsDialog.resx">
+    <EmbeddedResource Update="Forms\CredentialsDialog.resx">
       <DependentUpon>CredentialsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PathSelector.resx">
+    <EmbeddedResource Update="Forms\PathSelector.resx">
       <DependentUpon>PathSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ServerListEditor.resx">
+    <EmbeddedResource Update="Forms\ServerListEditor.resx">
       <DependentUpon>ServerListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StartServiceForm.resx">
+    <EmbeddedResource Update="Forms\StartServiceForm.resx">
       <DependentUpon>StartServiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotTheLicense.txt" />
@@ -465,81 +398,80 @@
     <Content Include="Icons\Plus.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controls\CrumbBar.resx">
+    <EmbeddedResource Update="Controls\CrumbBar.resx">
       <DependentUpon>CrumbBar.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ColorRulesDialog.resx">
+    <EmbeddedResource Update="Forms\ColorRulesDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ColorRulesDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ExportCSVForm.resx">
+    <EmbeddedResource Update="Forms\ExportCSVForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ExportCSVForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PaletteViewer.resx">
+    <EmbeddedResource Update="Forms\PaletteViewer.resx">
       <DependentUpon>PaletteViewer.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\About.resx">
+    <EmbeddedResource Update="Forms\About.resx">
       <SubType>Designer</SubType>
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CallStack.resx">
+    <EmbeddedResource Update="Forms\CallStack.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CallStack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ColumnsDlg.resx">
+    <EmbeddedResource Update="Forms\ColumnsDlg.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ColumnsDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FileProperties.resx">
+    <EmbeddedResource Update="Forms\FileProperties.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FileProperties.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FilterDialog.resx">
+    <EmbeddedResource Update="Forms\FilterDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FilterDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FindDialog.resx">
+    <EmbeddedResource Update="Forms\FindDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FindDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FullText.resx">
+    <EmbeddedResource Update="Forms\FullText.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FullText.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\License.resx">
+    <EmbeddedResource Update="Forms\License.resx">
       <SubType>Designer</SubType>
       <DependentUpon>License.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainForm.resx">
+    <EmbeddedResource Update="Forms\MainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\OptionsDialog.resx">
+    <EmbeddedResource Update="Forms\OptionsDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>OptionsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PasswordDialog.resx">
+    <EmbeddedResource Update="Forms\PasswordDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>PasswordDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\ServerTree.resx">
+    <EmbeddedResource Update="Controls\ServerTree.resx">
       <DependentUpon>ServerTree.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TracerXViewerControl.resx">
+    <EmbeddedResource Update="Controls\TracerXViewerControl.resx">
       <DependentUpon>TracerXViewerControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -547,663 +479,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <ProjectReference Include="..\TracerX-Common.NET\TracerX-Common.NET.csproj" />
+    <ProjectReference Include="..\TracerX-Logger.NET\TracerX-Logger.NET.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TracerX-Common\TracerX-Common.csproj">
-      <Project>{13F8EE48-FAE6-456B-B6AB-C3A169911894}</Project>
-      <Name>TracerX-Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TracerX-Logger\TracerX-Logger.csproj">
-      <Project>{54A86033-AACB-4A87-AD47-355548E42936}</Project>
-      <Name>TracerX-Logger</Name>
-      <Aliases>global</Aliases>
-    </ProjectReference>
-    <ProjectReference Include="..\TracerX-ServiceImpl\TracerX-ServiceImpl.csproj">
-      <Project>{58B31300-67DF-41C0-934C-F2E102CF53BF}</Project>
-      <Name>TracerX-ServiceImpl</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="ChangeNotes.txt">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\ArrowDown.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\ArrowUp.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Bookmark.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkArrowDown.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkArrowUp.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkLastSubline.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkMinus.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkPlus.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\BookmarkSubline.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\LastSubline.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Minus.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Play.bmp">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Plus.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\servers.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Stop.bmp">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Subline.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Icons\Transparent.ico">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\01.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\AnyThreadNext.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\AnyThreadPrev.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Bold.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\ClearColumnColors.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\clockNext.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\clockPlus.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\clockPrev.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Close File or Folder 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Close X Red 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\CloseDocument.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\CollapseAll.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\colors-edit.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\colors_on.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\colorwheel_16x16_plain.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Columns.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Date and Time.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Filter.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\FilterNot.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\find.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\findNext.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\findPrev.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\folder-open.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Green Plus 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\minus-circle.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\navigate_down_16x16_plain.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\navigate_up_16x16_plain.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\OpenFolder.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Options.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Pencil 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\plus-circle.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Red Minus 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Refresh.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\SameThreadNext.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\SameThreadPrev.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\scroll_view_16x16_plain.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\server--minus.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\server--plus.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\servers-network.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Stopwatch.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Resources\Web Link 16.png">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>False</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-  </ItemGroup>
-  <ItemGroup>
-    <FileAssociation Include=".tx1">
-      <Visible>False</Visible>
-      <Description>TracerX Log File</Description>
-      <Progid>%3f</Progid>
-      <DefaultIcon>Resources\scroll_view.ico</DefaultIcon>
-    </FileAssociation>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.YYMM.DDHHM" BuildVersion_UpdateAssemblyVersion="True" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>

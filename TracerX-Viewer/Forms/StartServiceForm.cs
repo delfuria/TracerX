@@ -47,7 +47,8 @@ namespace TracerX
             {
                 try
                 {
-                    TracerXServices.Startup(port, radDoImpersonate.Checked);
+                    // Removed by compatibility Issue
+                    //TracerXServices.Startup(port, radDoImpersonate.Checked);
                     DialogResult = DialogResult.OK;
                 }
                 catch (System.ServiceModel.AddressAlreadyInUseException)

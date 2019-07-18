@@ -3850,7 +3850,8 @@ namespace TracerX
         {
             if (runTracerXServiceToolStripMenuItem.Checked)
             {
-                TracerXServices.Shutdown(10);
+                // Removed by compatibility Issue
+                //TracerXServices.Shutdown(10);
                 runTracerXServiceToolStripMenuItem.Checked = false;
             }
             else

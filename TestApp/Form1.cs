@@ -322,6 +322,8 @@ namespace TestApp
 
         private void btnCrossAppDomains_Click(object sender, EventArgs e)
         {
+            // Removed by compatibility Issue
+            /*
             AppDomain otherDomain = AppDomain.CreateDomain("CrossAppDomains");
             otherDomain.DoCallBack(_domCallbacks.CrossAppDomains);
 
@@ -353,6 +355,7 @@ namespace TestApp
             }
 
             AppDomain.Unload(otherDomain);
+            */
         }
 
         private void btnReopenNoncircular_Click(object sender, EventArgs e)
